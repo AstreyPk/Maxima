@@ -1,3 +1,5 @@
+package recursion;
+
 public class recursion {
     // подсчет суммы чисел от 1 до n
     public static int sum(int n) {

@@ -1,3 +1,5 @@
+package recursion;
+
 public class recursiveFactorial {
 
     public static long factorial(int number){
