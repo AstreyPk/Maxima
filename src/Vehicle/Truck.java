@@ -1,7 +1,7 @@
 package Vehicle;
 
 public class Truck extends MotorTransport {
-    private int loadCapacity;
+    protected int loadCapacity;
 
     public Truck(int wheelCount, double maxSpeed, String engineType, int loadCapacity) {
         super(wheelCount, maxSpeed, engineType);
@@ -17,8 +17,8 @@ public class Truck extends MotorTransport {
 
     @Override
     public void service() {
-        System.out.println("Обслужено колёс - " + getWheelCount());
-        System.out.println("Обслужен двигатель типа \"" + getEngineType() + "\"");
+        System.out.println("Обслужено колёс - " + wheelCount);
+        System.out.println("Обслужен двигатель типа \"" + engineType + "\"");
         System.out.println("Грузоподъёмность грузовика: " + loadCapacity + " тонн");
     }
 }

@@ -1,7 +1,7 @@
 package Vehicle;
 
 public class Bicycle extends WheeledTransport {
-    private String bicycleType;
+    protected String bicycleType;
 
     public Bicycle(int wheelCount, double maxSpeed, String bicycleType) {
         super(wheelCount, maxSpeed);
@@ -17,7 +17,7 @@ public class Bicycle extends WheeledTransport {
 
     @Override
     public void service() {
-        System.out.println("Обслужено колёс - " + getWheelCount());
+        System.out.println("Обслужено колёс - " + wheelCount);
         System.out.println("Обслужен велосипед типа \"" + bicycleType + "\"");
     }
 }

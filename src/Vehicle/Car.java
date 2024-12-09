@@ -1,8 +1,8 @@
 package Vehicle;
 
 public class Car extends MotorTransport {
-    private String make;
-    private String model;
+    protected String make;
+    protected String model;
 
     public Car(int wheelCount, double maxSpeed, String engineType, String make, String model) {
         super(wheelCount, maxSpeed, engineType);
@@ -25,8 +25,8 @@ public class Car extends MotorTransport {
 
     @Override
     public void service() {
-        System.out.println("Обслужено колёс - " + getWheelCount());
-        System.out.println("Обслужен двигатель типа \"" + getEngineType() + "\"");
+        System.out.println("Обслужено колёс - " + wheelCount);
+        System.out.println("Обслужен двигатель типа \"" + engineType + "\"");
         System.out.println("Марка автомобиля: " + make);
         System.out.println("Модель автомобиля: " + model);
     }

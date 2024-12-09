@@ -11,7 +11,7 @@ public class main {
         visitServiceStation(truck);
     }
 
-    private static void visitServiceStation(WheeledTransport transport) {
+    protected static void visitServiceStation(WheeledTransport transport) {
         transport.service();
     }
 }

@@ -1,8 +1,8 @@
 package Vehicle;
 
 public class WheeledTransport {
-    private int wheelCount;
-    private double maxSpeed;
+    protected int wheelCount;
+    protected double maxSpeed;
 
     public WheeledTransport(int wheelCount, double maxSpeed) {
         this.wheelCount = wheelCount;
