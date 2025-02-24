@@ -1,33 +1,37 @@
 package Vehicle;
 
-public class Car extends MotorTransport {
-    protected String make;
-    protected String model;
+public class Car extends MotorTransport{
 
-    public Car(int wheelCount, double maxSpeed, String engineType, String make, String model) {
-        super(wheelCount, maxSpeed, engineType);
-        this.make = make;
-        this.model = model;
+    private String carBrand;
+    private String carModel;
+
+    public Car(int wheelCount, int maxSpeed, String motorType, String carBrand, String carModel) {
+        super(wheelCount, maxSpeed, motorType);
+        this.carBrand = carBrand;
+        this.carModel = carModel;
     }
 
-    public String getMake() {
-        return make;
+    public String getCarBrand() {
+        return carBrand;
     }
-    public void setMake(String make) {
-        this.make = make;
+
+    public String getCarModel() {
+        return carModel;
     }
-    public String getModel() {
-        return model;
+
+    public void setCarBrand(String carBrand) {
+        this.carBrand = carBrand;
     }
-    public void setModel(String model) {
-        this.model = model;
+
+    public void setCarModel(String carModel) {
+        this.carModel = carModel;
     }
 
     @Override
     public void service() {
-        System.out.println("Обслужено колёс - " + wheelCount);
-        System.out.println("Обслужен двигатель типа \"" + engineType + "\"");
-        System.out.println("Марка автомобиля: " + make);
-        System.out.println("Модель автомобиля: " + model);
+        System.out.println("Обслужено колёс - " + getWheelCount());
+        System.out.println("Марка - " + carBrand);
+        System.out.println("Модель - " + carModel);
+        System.out.println("Обслужен двигатель типа \"" + getMotorType() + "\"");
     }
 }
