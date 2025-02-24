@@ -1,10 +1,10 @@
 package Vehicle;
 
 public class WheeledTransport {
-    protected int wheelCount;
-    protected double maxSpeed;
-
-    public WheeledTransport(int wheelCount, double maxSpeed) {
+    private int wheelCount;
+    private int maxSpeed;
+    public WheeledTransport(int wheelCount, int maxSpeed)
+    {
         this.wheelCount = wheelCount;
         this.maxSpeed = maxSpeed;
     }
@@ -13,19 +13,20 @@ public class WheeledTransport {
         return wheelCount;
     }
 
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
+
     public void setWheelCount(int wheelCount) {
         this.wheelCount = wheelCount;
     }
 
-    public double getMaxSpeed() {
-        return maxSpeed;
-    }
-
-    public void setMaxSpeed(double maxSpeed) {
+    public void setMaxSpeed(int maxSpeed) {
         this.maxSpeed = maxSpeed;
     }
 
-    public void service() {
+    public void service()
+    {
         System.out.println("Обслужено колёс - " + wheelCount);
     }
 }

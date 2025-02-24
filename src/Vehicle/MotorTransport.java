@@ -1,23 +1,24 @@
 package Vehicle;
 
-public class MotorTransport extends WheeledTransport {
-    protected String engineType;
-
-    public MotorTransport(int wheelCount, double maxSpeed, String engineType) {
+public class MotorTransport extends WheeledTransport{
+    private String motorType;
+    public MotorTransport(int wheelCount, int maxSpeed, String motorType) {
         super(wheelCount, maxSpeed);
-        this.engineType = engineType;
+        this.motorType = motorType;
+
     }
 
-    public String getEngineType() {
-        return engineType;
+    public String getMotorType() {
+        return motorType;
     }
-    public void setEngineType(String engineType) {
-        this.engineType = engineType;
+
+    public void setMotorType(String motorType) {
+        this.motorType = motorType;
     }
 
     @Override
     public void service() {
-        System.out.println("Обслужено колёс - " + wheelCount);
-        System.out.println("Обслужен двигатель типа \"" + engineType + "\"");
+        System.out.println("Обслужено колёс - " + getWheelCount());
+        System.out.println("Обслужен двигатель типа  - " + motorType);
     }
 }
